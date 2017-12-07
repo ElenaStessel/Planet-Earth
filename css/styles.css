@@ -5,7 +5,7 @@
 @font-face {
     font-family: "RobotoRegular";
     src: url("../fonts/RobotoRegular/RobotoRegular.eot");
-    src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix")format("embedded-opentype"),
+    src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"),
     url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"),
     url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
     font-style: normal;
@@ -15,7 +15,7 @@
 @font-face {
     font-family: "RobotoLight";
     src: url("../fonts/RobotoLight/RobotoLight.eot");
-    src: url("../fonts/RobotoLight/RobotoLight.eot?#iefix")format("embedded-opentype"),
+    src: url("../fonts/RobotoLight/RobotoLight.eot?#iefix") format("embedded-opentype"),
     url("../fonts/RobotoLight/RobotoLight.woff") format("woff"),
     url("../fonts/RobotoLight/RobotoLight.ttf") format("truetype");
     font-style: normal;
@@ -25,7 +25,7 @@
 @font-face {
     font-family: "RobotoMedium";
     src: url("../fonts/RobotoMedium/RobotoMedium.eot");
-    src: url("../fonts/RobotoMedium/RobotoMedium.eot?#iefix")format("embedded-opentype"),
+    src: url("../fonts/RobotoMedium/RobotoMedium.eot?#iefix") format("embedded-opentype"),
     url("../fonts/RobotoMedium/RobotoMedium.woff") format("woff"),
     url("../fonts/RobotoMedium/RobotoMedium.ttf") format("truetype");
     font-style: normal;
@@ -35,7 +35,7 @@
 @font-face {
     font-family: "RobotoBold";
     src: url("../fonts/RobotoBold/RobotoBold.eot");
-    src: url("../fonts/RobotoBold/RobotoBold.eot?#iefix")format("embedded-opentype"),
+    src: url("../fonts/RobotoBold/RobotoBold.eot?#iefix") format("embedded-opentype"),
     url("../fonts/RobotoBold/RobotoBold.woff") format("woff"),
     url("../fonts/RobotoBold/RobotoBold.ttf") format("truetype");
     font-style: normal;
@@ -51,6 +51,7 @@
 
 .wrapper {
     max-width: 1110px;
+    min-width: 370px;
     margin: 0 auto;
 }
 
@@ -473,6 +474,10 @@
         flex-direction: column;
     }
 
+    .static-block {
+        margin-bottom: 0;
+    }
+
     .static-block__content-right {
         display: flex;
     }
@@ -481,5 +486,69 @@
 @media (max-width: 880px) {
     .products {
         margin: 0 10% 66px;
+    }
+}
+
+@media (max-width: 740px) {
+    .products {
+        margin: 0 0 66px;
+    }
+
+    .static-block {
+        width: 370px;
+        margin: auto;
+    }
+
+    .content-top {
+        flex-direction: column;
+    }
+
+    .static-block__content-right {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 640px) {
+    .nav__element {
+        padding: 0 15px;
+        margin: 0 5px;
+    }
+}
+
+@media (max-width: 525px) {
+    .header__nav {
+        margin-bottom: 50px;
+    }
+
+    .products {
+        margin-bottom: 40px;
+    }
+
+    .product {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .header__top {
+        font-size: 12px;
+    }
+
+    .header__top__language,
+    .header__top__currency,
+    .sign-in,
+    .contacts {
+        padding: 0 5px;
+    }
+
+    .header__actions__logo {
+        margin-bottom: 0;
+        font-size: 26px;
+    }
+
+    .nav__element {
+        padding: 0 5px;
+        margin: 0 3px;
+        font-size: 12px;
     }
 }
